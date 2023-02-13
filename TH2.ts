@@ -1,18 +1,24 @@
-class point{
-    public x:number;
-    public y:number;
+class Point {
+    public x: number;
+    public y: number;
 
     constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
     }
-    displayname="point";
-    hienthi(c){
-        let ax=this.x-c.x;
-        let ay=this.y-c.y;
-        return Math.hypot(ax,ay);
+
+    displayname = Point;
+
+    hienthi(b:Point) {
+        let ax = this.x - b.x;
+        let ay = this.y - b.y;
+
+        return Math.hypot(ax, ay);
     }
-} let p1=new point(10,13);
-let p2=new point(15,8);
+}
+
+let p1 = new Point(5, 5);
+let p2 = new Point(10, 10);
 console.log(p1.displayname);
 console.log(p1.hienthi(p2));
+
